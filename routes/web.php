@@ -32,11 +32,11 @@ Auth::routes();
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\postController::class, 'index']);
 
 
 // Route Biasa - Home 
-Route::get('/home', [PageController::class, 'home']);
+// Route::get('/home', [PageController::class, 'home']);
 
 // Route Prefix - Product
 Route::prefix('product')->group(function () {
@@ -60,4 +60,4 @@ Route::get('/contact', [PageController::class, 'contact']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\postController::class, 'index']);
